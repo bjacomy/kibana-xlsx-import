@@ -7,11 +7,8 @@ import Main from './components/main.js';
 import { EuiStepsHorizontal} from '@elastic/eui';
 import StepTwo from './components/stepTwo.js';
 import StepThree from './components/stepThree.js';
-import { i18n } from '@kbn/i18n';
 
 
-let bulkSize;                                 // Taille maximal des paquets du bulk
-let maxDisplayableElement;                    // Nombre d'element afficher dans la previs des données
 
 let horizontalSteps = [
   {
@@ -50,6 +47,8 @@ export const renderApp = (
   { notifications, http }: CoreStart,
   { navigation }: AppPluginStartDependencies,
   { appBasePath, element }: AppMountParameters,
+  bulkSize : number,
+  displayedRows: number
   //chrome: ChromeStart,
 ) => {
   var i;
@@ -66,6 +65,7 @@ export const renderApp = (
       notifications={notifications}
       http={http}
       navigation={navigation}
+      maxDisplayableElement={displayedRows}
     />,
     element
   );

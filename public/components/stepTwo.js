@@ -45,7 +45,6 @@ class StepTwo extends Component {
       _line: "1337",
       _uid: getUID()
     }
-
     this.anonOptions = this.props.columns.map((c) => ({label: c.name}))
 
     this.tzOptions = moment.tz.names().map(tz => ({label: tz}))

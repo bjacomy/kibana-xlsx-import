@@ -34,6 +34,7 @@ import {
 class StepOne extends Component {
   constructor(props) {
     super(props);
+    this.maxDisplayableElement = props.maxDisplayableElement;
 
     this.state = {
       workbook: {},
@@ -116,7 +117,7 @@ class StepOne extends Component {
 
     if(this.state.workbook.Sheets[item]['!ref'] != undefined) {
       let range = XLSX.utils.decode_range(this.state.workbook.Sheets[item]['!ref']);
-      if(range.e.r > 5) range.e.r = 5; //TODO : use config instead
+      if(range.e.r > 5) range.e.r = this.maxDisplayableElement; //TODO : use config instead
 
       let columns = getHeaderRowWithType(this.state.workbook.Sheets[item]);
 

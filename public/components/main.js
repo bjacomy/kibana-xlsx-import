@@ -60,6 +60,7 @@ export  const Main  =  ({
   notifications,
   http,
   navigation,
+  maxDisplayableElement,
 }) => {
   
   // Render the application DOM.
@@ -90,7 +91,7 @@ export  const Main  =  ({
                 <EuiStepsHorizontal steps={steps} style={{ backgroundColor: "white" }} />
           </EuiPageContentHeader>
           <EuiPageContentBody id="main">
-          <StepOne nextStep={nextStep} />
+          <StepOne nextStep={nextStep} maxDisplayableElement={maxDisplayableElement} />
           </EuiPageContentBody>
         </EuiPageContent>
       </EuiPageBody>
