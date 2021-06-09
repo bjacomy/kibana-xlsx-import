@@ -9,8 +9,7 @@ export function broofa() {
 export function createBulk(json, indexName, kbnCustomId = '', BULKSIZE = 1000) {
   var bulk_request = [];
   var bulk_package = [];
-  console.log("createBulk");
-  console.log(BULKSIZE);
+
   let line = 2 // +2 == (header line + begin from 1 not from 0)
 
   for(var i = 0; i < json.length; i++) {

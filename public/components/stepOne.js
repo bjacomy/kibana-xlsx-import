@@ -117,6 +117,7 @@ class StepOne extends Component {
 
     if(this.state.workbook.Sheets[item]['!ref'] != undefined) {
       let range = XLSX.utils.decode_range(this.state.workbook.Sheets[item]['!ref']);
+      console.log(range.e.r)
       if(range.e.r > 5) range.e.r = this.maxDisplayableElement; //TODO : use config instead
 
       let columns = getHeaderRowWithType(this.state.workbook.Sheets[item]);
