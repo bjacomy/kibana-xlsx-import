@@ -30,7 +30,7 @@ export class KibanaXlsxImportPlugin
           defaultMessage: 'bulk size for xlsx import',
         }),
         value: 1000,
-        description: i18n.translate('timelion.uiSettings.showBulkDescription', {
+        description: i18n.translate('kibanaXlsxImport.uiSettings.showBulkDescription', {
           defaultMessage: 'xlsx import index will be created using bulksize',
         }),
         category: ['kibanaXlsxImport'],
@@ -39,11 +39,11 @@ export class KibanaXlsxImportPlugin
     });
     core.uiSettings.register({
       'displayed_row': {
-        name: i18n.translate('timelion.uiSettings.showDisplayedRowsLabel', {
+        name: i18n.translate('kibanaXlsxImport.uiSettings.showDisplayedRowsLabel', {
           defaultMessage: 'number of row for file preview',
         }),
         value: 50,
-        description: i18n.translate('timelion.uiSettings.showDisplayedRowsDescription', {
+        description: i18n.translate('kibanaXlsxImport.uiSettings.showDisplayedRowsDescription', {
           defaultMessage: 'After file selection, this data limit the number of file item displayed during preview',
         }),
         category: ['kibanaXlsxImport'],
