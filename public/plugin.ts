@@ -17,8 +17,7 @@ export class KibanaXlsxImportPlugin
   public setup(core: CoreSetup): KibanaXlsxImportPluginSetup {
     // Register an application into the side navigation menu
     const config = this.initializerContext.config.get<ClientConfigType>();
-    console.log(this.initializerContext.env);
-    console.log(config.enabled);
+ 
     core.application.register({
       id: 'kibanaXlsxImport',
       title: PLUGIN_NAME,
