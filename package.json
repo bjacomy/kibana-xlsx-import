@@ -1,6 +1,6 @@
 {
   "name": "kibana-xlsx-import",
-  "version": "7.10.0",
+  "version": "7.10.2",
   "description": "Import XLSX/CSV to Elasticsearch indices",
   "kibana": {
     "version": "kibana",
